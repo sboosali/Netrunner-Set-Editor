@@ -1,0 +1,6 @@
+.DS_Store
+*.lnk
+*.bak
+
+mse.exe
+# *.mse-set
