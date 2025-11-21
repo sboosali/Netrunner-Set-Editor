@@ -1,0 +1,129 @@
+mse version: 2.0.0
+game: anr-runner
+short name: A:NR Runner
+full name: Runner Hardware
+icon: icon.png
+position hint: 3
+installer group: anr-runner/style
+
+depends on: anr-runner.mse-game
+depends on: anr-runner-coins.mse-include  0.0.0
+depends on: anr-runner-influence.mse-include  0.0.0
+depends on: anr-symbol.mse-symbol-font
+
+card width: 300
+card height: 418
+card dpi: 72
+
+card style:
+	bg_color
+		top: 0
+		left: 0
+		height: 418
+		width: 300
+		mask: White_Card_Template.png
+			
+	faction:
+		top: 0
+		left: 0
+		height: 418
+		width: 300
+		render style: image
+		choice images:
+			criminal: criminal.png
+			anarch: anarch.png
+			shaper: shaper.png
+			neutral: neutral.png
+						
+	image:
+		top:14
+		left:16
+		height:211
+		width:272
+		z index: 1
+		mask: mask.png
+		
+	cost:
+		top:11
+		left:5
+		height: 61
+		width: 61
+		render style: image
+		z index: 3
+		mask: /anr-runner-coins.mse-include/coin-mask.png
+		choice images:
+			zero: /anr-runner-coins.mse-include/cost-0.png
+			one: /anr-runner-coins.mse-include/cost-1.png
+			two: /anr-runner-coins.mse-include/cost-2.png
+			three: /anr-runner-coins.mse-include/cost-3.png
+			four: /anr-runner-coins.mse-include/cost-4.png
+			five: /anr-runner-coins.mse-include/cost-5.png
+			six: /anr-runner-coins.mse-include/cost-6.png
+			seven: /anr-runner-coins.mse-include/cost-7.png
+			eight: /anr-runner-coins.mse-include/cost-8.png
+			nine: /anr-runner-coins.mse-include/cost-9.png
+			ten: /anr-runner-coins.mse-include/cost-10.png
+		
+	influence:
+		top:295
+		left:275
+		height: 92
+		width: 24
+		render style: image
+		z index: 3
+		mask: /anr-runner-influence.mse-include/influencemask.png
+		choice images:
+			zero: script: "/anr-runner-influence.mse-include/"+card.faction+"-influence-0.png"
+			one: script: "/anr-runner-influence.mse-include/"+card.faction+"-influence-1.png"
+			two: script: "/anr-runner-influence.mse-include/"+card.faction+"-influence-2.png"
+			three: script: "/anr-runner-influence.mse-include/"+card.faction+"-influence-3.png"
+			four: script: "/anr-runner-influence.mse-include/"+card.faction+"-influence-4.png"
+			five: script: "/anr-runner-influence.mse-include/"+card.faction+"-influence-5.png"
+	title:
+		top: 214
+		left: 63
+		height: 10
+		width: 198
+		alignment: left middle
+		
+		font:
+			name: Trajan Pro
+			size: 10
+			color: rgb(0,0,0)
+			
+	type:
+		top: 248
+		left: 121
+		height: 10
+		width: 118
+		alignment: left middle
+		
+		font:
+			name: Gill Sans MT
+			size: 9.6
+			color: rgb(0,0,0)
+			
+	illustrator:
+		top: 387
+		left: 30
+		height: 7
+		width: 143
+		alignment: left middle
+		font:
+			name: Minion Pro
+			size: 7.3
+			color: rgb(0,0,0)
+	text:
+		top: 272
+		left: 45
+		height: 108
+		width: 225
+		alignment: left
+		font:
+			name: Minion Pro
+			size: 10.3
+			scale down to: 7.3
+			color: rgb(0,0,0)
+		symbol font:
+			name: anr-symbol
+			size: 11

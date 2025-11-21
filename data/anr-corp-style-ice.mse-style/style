@@ -1,0 +1,155 @@
+mse version: 2.0.0
+game: anr-corp
+short name: A:NR Corp
+full name: Corp ICE
+icon: icon.png
+position hint: 4
+installer group: anr-corp/style
+
+depends on: anr-corp.mse-game 0.0.0
+depends on: anr-corp-coins.mse-include 0.0.0
+depends on: anr-corp-icemisc.mse-include 0.0.0
+depends on: anr-corp-influence.mse-include 0.0.0
+depends on: anr-symbol.mse-symbol-font
+
+card width: 300
+card height: 418
+card dpi: 72
+
+card style:
+	bg_color
+		top: 0
+		left: 0
+		height: 418
+		width: 300
+		mask: White_Card_Template.png
+			
+	faction:
+		top: 0
+		left: 0
+		height: 418
+		width: 300
+		z index: 1
+		render style: image
+		choice images:
+			HB: HB.png
+			Jinteki: Jinteki.png
+			Weyland: Weyland.png
+			NBN: NBN.png
+			Neutral: Neutral.png
+						
+	image:
+		top:418
+		left:24
+		height:241
+		width:203
+		z index: 1
+		angle:90
+		mask: icemask.png
+		
+	influence:
+		top:297
+		left:277
+		height: 74
+		width: 15
+		render style: image
+		z index: 3
+		choice images:
+			zero: 	script: "/anr-corp-influence.mse-include/"+card.faction+"-ice-zero.png"
+			one:	script: "/anr-corp-influence.mse-include/"+card.faction+"-ice-one.png"
+			two:	script: "/anr-corp-influence.mse-include/"+card.faction+"-ice-two.png"
+			three:	script: "/anr-corp-influence.mse-include/"+card.faction+"-ice-three.png"
+			four:	script: "/anr-corp-influence.mse-include/"+card.faction+"-ice-four.png"
+			five:	script: "/anr-corp-influence.mse-include/"+card.faction+"-ice-five.png"
+			
+	Strength:
+		top:355
+		left:0
+		height: 63
+		width: 47
+		render style: image
+		z index: 3
+		choice images:
+			zero:		/anr-corp-icemisc.mse-include/str-0.png
+			one:		/anr-corp-icemisc.mse-include/str-1.png
+			two:		/anr-corp-icemisc.mse-include/str-2.png
+			three:		/anr-corp-icemisc.mse-include/str-3.png
+			four:		/anr-corp-icemisc.mse-include/str-4.png
+			five:		/anr-corp-icemisc.mse-include/str-5.png
+			six:		/anr-corp-icemisc.mse-include/str-6.png
+			seven:		/anr-corp-icemisc.mse-include/str-7.png
+			eight:		/anr-corp-icemisc.mse-include/str-8.png
+			nine:		/anr-corp-icemisc.mse-include/str-9.png
+			ten:		/anr-corp-icemisc.mse-include/str-10.png
+			
+	cost:
+		top:30
+		left:28
+		height: 14
+		width: 16
+		render style: image
+		z index: 3
+		choice images:
+			zero:		/anr-corp-coins.mse-include/Cost-zero.png
+			one:		/anr-corp-coins.mse-include/Cost-one.png
+			two:		/anr-corp-coins.mse-include/Cost-two.png
+			three:		/anr-corp-coins.mse-include/Cost-three.png
+			four:		/anr-corp-coins.mse-include/Cost-four.png
+			five:		/anr-corp-coins.mse-include/Cost-five.png
+			six:		/anr-corp-coins.mse-include/Cost-six.png
+			seven:		/anr-corp-coins.mse-include/Cost-seven.png
+			eight:		/anr-corp-coins.mse-include/Cost-eight.png
+			nine:		/anr-corp-coins.mse-include/Cost-nine.png
+	title:
+		top: 19
+		left: 71
+		height: 15
+		width: 207
+		z index: 3
+		alignment: left middle shrink-overflow
+		
+		font:
+			name: Trajan Pro
+			size: 10
+			color: rgb(0,0,0)
+			
+	type:
+		top: 290
+		left: 21
+		height: 11
+		width: 213
+		z index: 3
+		alignment: right middle shrink-overflow
+		angle: 90
+		
+		font:
+			name: Gill Sans MT
+			size: 9.6
+			color: rgb(0,0,0)
+			
+	illustrator:
+		top: 355
+		left: 264
+		height: 10
+		width: 135
+		angle:90
+		z index: 3
+		alignment: right middle
+		font:
+			name: Minion Pro
+			size: 6.3
+			color: rgb(0,0,0)
+	text:
+		top: 60
+		left: 62
+		height: 144
+		width: 202
+		z index: 3
+		font:
+			name: Times New Roman
+			size: 10.3
+			scale down to: 6.3
+			color: rgb(0,0,0)
+		symbol font:
+			name: anr-symbol
+			size: 11

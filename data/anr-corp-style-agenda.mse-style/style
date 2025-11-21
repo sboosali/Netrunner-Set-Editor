@@ -1,0 +1,118 @@
+mse version: 2.0.0
+game: anr-corp
+short name: A:NR Corp
+full name: Corp Agendas
+icon: icon.png
+position hint: 2
+installer group: anr-corp/style
+
+depends on: anr-corp.mse-game
+depends on: anr-symbol.mse-symbol-font
+
+card width: 300
+card height: 418
+card dpi: 72
+
+card style:
+	bg_color
+		top: 0
+		left: 0
+		height: 418
+		width: 300
+		mask: White_Card_Template.png
+			
+	faction:
+		top: 0
+		left: 0
+		height: 418
+		width: 300
+		render style: image
+		choice images:
+			HB: HB.png
+			Jinteki: Jinteki.png
+			Weyland: Weyland.png
+			NBN: NBN.png
+			Neutral: Neutral.png
+			
+	AgendaPoints:
+		top: 214
+		left: 23
+		height: 24
+		width: 24
+		render style: image
+		choice images:
+			one: One-AP.png
+			two: Two-AP.png
+			three: Three-AP.png
+			
+	advance:
+		top: 16
+		left: 260
+		height: 23
+		width: 24
+		render style: image
+		choice images:
+			two: Two.png
+			three: Three.png
+			four: Four.png
+			five: Five.png
+			six: Six.png
+						
+	image:
+		top:0
+		left:0
+		height:245
+		width:300
+		z index: 1
+		mask: mask.png
+		
+	title:
+		top: 22
+		left: 22
+		height: 13
+		width: 215
+		alignment: left middle
+		
+		font:
+			name: Trajan Pro
+			size: 10
+			color: rgb(0,0,0)
+			
+	type:
+		top: 268
+		left: 90
+		height: 10
+		width: 118
+		alignment: left middle
+		
+		font:
+			name: Gill Sans MT
+			size: 9.6
+			color: rgb(0,0,0)
+			
+	illustrator:
+		top: 360
+		left: 276
+		height: 10
+		width: 80
+		angle:90
+		z index: 2
+		alignment: left middle
+		font:
+			name: Minion Pro
+			size: 6.3
+			color: rgb(0,0,0)
+						
+	text:
+		top: 290
+		left: 34
+		height: 86
+		width: 230
+		font:
+			name: Minion Pro
+			size: 10.3
+			scale down to: 7.3
+			color: rgb(0,0,0)
+		symbol font:
+			name: anr-symbol
+			size: 11

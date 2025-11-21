@@ -1,0 +1,142 @@
+mse version: 2.0.0
+short name: NR Runner
+full name: Netrunner
+icon: icon.png
+position hint: 2
+installer group: anr-runner/game
+
+init script: include file: script
+	
+quote_filter := {
+	curly_quotes("<size:8.3>"+input+"</size>")
+}
+
+card field
+	type: color
+	name: bg_color
+	show statistics: false
+	editable: false
+	default: rgb(255,250,250)
+	
+card field:
+	type: choice
+	name: faction
+	description: faction of the card
+	choice: anarch
+	choice: shaper
+	choice: criminal
+	choice: neutral
+	
+card field:
+	type: choice
+	name: link
+	description: link of the ID card
+	choice: zero
+	choice: one
+	
+card field:
+	type: choice
+	name: decksize
+	description: faction of the card
+	choice: Forty-Five
+	choice: Forty
+	choice: Fifty
+	choice: Fifty-Five
+	
+card field:
+	type: choice
+	name: inflimit
+	description: faction of the card
+	choice: Fifteen
+	choice: One
+	choice: Five
+	choice: Ten
+	
+card field:
+	type: choice
+	name: cost
+	description: cost of the card
+	choice: zero
+	choice: one
+	choice: two
+	choice: three
+	choice: four
+	choice: five
+	choice: six
+	choice: seven
+	choice: eight
+	choice: nine
+	choice: ten
+	
+card field:
+	type: choice
+	name: influence
+	description: influence of the card
+	choice: zero
+	choice: one
+	choice: two
+	choice: three
+	choice: four
+	choice: five
+	
+card field:
+	type: choice
+	name: Memory
+	description: MU cost of the card
+	choice: one
+	choice: two
+	choice: zero
+	
+card field:
+	type: choice
+	name: Breakers
+	description: Strength of the card
+	choice: null
+	choice: X
+	choice: zero
+	choice: one
+	choice: two
+	choice: three
+	choice: four
+	choice: five
+	choice: six
+	choice: seven
+	choice: eight
+	choice: nine
+	choice: ten
+	
+card field:
+	type: text
+	name: title
+	description: Name of the card
+	editable: true
+	
+card field:
+	type: text
+	name: subtitle
+	description: subtitle of the card
+	editable: true
+	
+card field:
+	type: text
+	name: type
+	description: type of the card
+	editable: true
+	
+card field:
+	type: text
+	name: illustrator
+	description: illustrator of the card
+	editable: true
+		
+card field:
+	type: image
+	name: image
+	description: image of the card
+	
+card field:
+	type: text
+	name: text
+	multi line: true
+	description: Some additional text.
+	script: tag_contents(tag: "<i>", contents: quote_filter, input: value)

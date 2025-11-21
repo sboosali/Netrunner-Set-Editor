@@ -1,0 +1,134 @@
+mse version: 2.0.0
+game: anr-corp
+short name: A:NR Corp
+full name: Corp Identities
+icon: icon.png
+position hint: 1
+installer group: anr-corp/style
+
+depends on: anr-corp.mse-game
+depends on: anr-symbol.mse-symbol-font
+
+card width: 300
+card height: 418
+card dpi: 72
+
+card style:
+	bg_color
+		top: 0
+		left: 0
+		height: 418
+		width: 300
+		mask: White_Card_Template.png
+			
+	faction:
+		top: 0
+		left: 0
+		height: 418
+		width: 300
+		render style: image
+		choice images:
+			NBN: Identity_NBN.png
+			Jinteki: Identity_Jinteki.png
+			Weyland: Identity_Weyland.png
+			HB: Identity_Hasbro.png
+			Neutral: Identity_Neutral.png
+						
+	image:
+		top:0
+		left:26
+		height:299
+		width:249
+		mask: mask.png
+		z index: 1
+					
+	decksize:
+		top:367
+		left:16
+		height: 14
+		width: 27
+		render style: image
+		z index: 1
+		choice images:
+			Forty-Five: Forty-Five.png
+			Forty:		forty.png
+			Fifty:		Fifty.png
+			Fifty-Five:	Fifty-Five.png
+			
+	inflimit:
+		top:389
+		left:19
+		height: 13
+		width: 25
+		render style: image
+		z index: 1
+		choice images:
+			Fifteen:	Fifteen.png
+			One:		One.png
+			Five:		Five.png
+			Ten:		Ten.png
+			
+	title:
+		top: 25
+		left: 56
+		height: 15
+		width: 188
+		z index: 3
+		alignment: left middle
+		
+		font:
+			name: Trajan Pro
+			size: 12
+			color: rgb(0,0,0)
+			
+	subtitle:
+		top: 51
+		left: 18
+		height: 11
+		width: 174
+		z index: 3
+		alignment: left middle
+		
+		font:
+			name: Trajan Pro
+			size: 7.4
+			color: rgb(0,0,0)
+			
+	type:
+		top: 312
+		left: 100
+		height: 11
+		width: 174
+		z index: 3
+		alignment: left middle
+		
+		font:
+			name: Gill Sans MT
+			size: 9.6
+			color: rgb(0,0,0)
+			
+	illustrator:
+		top: 226
+		left: 280
+		height: 20
+		width: 135
+		angle:90
+		z index: 3
+		alignment: left upper
+		font:
+			name: Minion Pro
+			size: 6.3
+			color: rgb(255,255,255)
+	text:
+		top: 337
+		left: 59
+		height: 68
+		width: 231
+		font:
+			name: Minion Pro
+			size: 10.3
+			scale down to: 7.3
+			color: rgb(0,0,0)
+		symbol font:
+			name: anr-symbol
+			size: 11

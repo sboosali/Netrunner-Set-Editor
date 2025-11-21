@@ -1,0 +1,9 @@
+
+	
+quote_filter := {
+	curly_quotes("<size:8.3>"+input+"</size>")
+}
+#monkirta pursuit nc
+ice_filter := {
+	"<font:Trajan Pro>ICE:</font>"
+}

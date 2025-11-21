@@ -1,0 +1,153 @@
+mse version: 2.0.0
+short name: A:NR Corp
+full name: Android: Netrunner
+icon: icon.png
+position hint: 2
+installer group: anr-corp/game
+
+init script: include file: script
+
+card field
+	type: color
+	name: bg_color
+	show statistics: false
+	editable: false
+	default: rgb(255,250,250)
+	
+card field:
+	type: choice
+	name: faction
+	description: faction of the card
+	choice: NBN
+	choice: Jinteki
+	choice: Weyland
+	choice: HB
+	choice: Neutral
+		
+card field:
+	type: choice
+	name: AgendaPoints
+	description: Agenda Points of the card
+	choice: one
+	choice: two
+	choice: three
+	
+card field:
+	type: choice
+	name: decksize
+	description: faction of the card
+	choice: Forty-Five
+	choice: Forty
+	choice: Fifty
+	choice: Fifty-Five
+	
+card field:
+	type: choice
+	name: inflimit
+	description: faction of the card
+	choice: Fifteen
+	choice: One
+	choice: Five
+	choice: Ten
+	
+card field:
+	type: choice
+	name: Strength
+	description: Strength of the card
+	choice: zero
+	choice: one
+	choice: two
+	choice: three
+	choice: four
+	choice: five
+	choice: six
+	choice: seven
+	choice: eight
+	choice: nine
+	choice: ten
+	
+card field:
+	type: choice
+	name: cost
+	description: cost of the card
+	choice: zero
+	choice: one
+	choice: two
+	choice: three
+	choice: four
+	choice: five
+	choice: six
+	choice: seven
+	choice: eight
+	choice: nine
+	choice: ten
+	
+card field:
+	type: choice
+	name: advance
+	description: advancements of the agenda
+	choice: two
+	choice: three
+	choice: four
+	choice: five
+	choice: six
+	
+card field:
+	type: choice
+	name: influence
+	description: influence of the card
+	choice: zero
+	choice: one
+	choice: two
+	choice: three
+	choice: four
+	choice: five
+	
+card field:
+	type: choice
+	name: trash
+	description: trash of the card
+	choice: zero
+	choice: one
+	choice: two
+	choice: three
+	choice: four
+	choice: five
+	choice: six
+	
+card field:
+	type: text
+	name: title
+	description: Name of the card
+	editable: true
+	
+card field:
+	type: text
+	name: subtitle
+	description: subtitle of the card
+	editable: true
+	
+card field:
+	type: text
+	name: type
+	description: type of the card
+	editable: true
+	script: replace(match: "ICE:", replace: ice_filter, input: value)
+		
+card field:
+	type: text
+	name: illustrator
+	description: illustrator of the card
+	editable: true
+	
+card field:
+	type: image
+	name: image
+	description: image of the card
+	
+card field:
+	type: text
+	name: text
+	multi line: true
+	description: Some additional text.
+	script: tag_contents(tag: "<i>", contents: quote_filter, input: value)

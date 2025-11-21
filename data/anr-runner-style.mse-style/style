@@ -1,0 +1,144 @@
+mse version: 2.0.0
+game: anr-runner
+short name: A:NR Runner
+full name: Runner IDs
+icon: icon.png
+position hint: 1
+installer group: anr-runner/style
+
+depends on: anr-runner.mse-game
+depends on: anr-symbol.mse-symbol-font
+
+card width: 300
+card height: 418
+card dpi: 72
+
+card style:
+	bg_color
+		top: 0
+		left: 0
+		height: 418
+		width: 300
+		mask: White_Card_Template.png
+			
+	faction:
+		top: 0
+		left: 0
+		height: 418
+		width: 300
+		render style: image
+		choice images:
+			criminal: criminal-ID.png
+			neutral: neutral-ID.png
+			anarch: anarch-ID.png
+			shaper: shaper-ID.png
+						
+	image:
+		top:50
+		left:10
+		height:245
+		width:280
+		mask: mask.png
+		z index: 1
+		
+	link:
+		top:30
+		left:21
+		height: 18
+		width: 21
+		render style: image
+		z index: 2
+		choice images:
+			zero: script: card.faction+"-link-0.png"
+			one: script: card.faction+"-link-1.png"
+			
+	decksize:
+		top:367
+		left:256
+		height: 14
+		width: 27
+		render style: image
+		z index: 2
+		choice images:
+			Forty-Five: Forty-Five.png
+			Forty:		forty.png
+			Fifty:		Fifty.png
+			Fifty-Five:	Fifty-Five.png
+			
+	inflimit:
+		top:391
+		left:259
+		height: 13
+		width: 25
+		render style: image
+		z index: 2
+		choice images:
+			Fifteen:	Fifteen.png
+			One:		One.png
+			Five:		Five.png
+			Ten:		Ten.png
+		
+	title:
+		top: 15
+		left: 100
+		height: 13
+		width: 150
+		z index: 2
+		alignment: left middle
+		
+		font:
+			name: Trajan Pro
+			size: 10
+			color: rgb(0,0,0)
+			
+	subtitle:
+		top: 38
+		left: 140
+		height: 8
+		width: 139
+		z index: 2
+		alignment: left middle
+		font:
+			name: Trajan Pro
+			size: 6.4
+			color: rgb(0,0,0)
+			
+	type:
+		top: 312
+		left: 110
+		height: 12
+		width: 100
+		z index: 2
+		alignment: left middle
+		
+		font:
+			name: Gill Sans MT
+			size: 9.6
+			color: rgb(0,0,0)
+			
+	illustrator:
+		top: 226
+		left: 280
+		height: 20
+		width: 135
+		angle:90
+		z index: 2
+		alignment: left upper
+		font:
+			name: Minion Pro
+			size: 6.3
+			color: rgb(255,255,255)
+	text:
+		top: 335
+		left: 50
+		height: 75
+		width: 195
+		z index: 2
+		font:
+			name: Minion Pro
+			size: 10.3
+			scale down to: 7.3
+			color: rgb(0,0,0)
+		symbol font:
+			name: anr-symbol
+			size: 11
